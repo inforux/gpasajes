@@ -1,6 +1,11 @@
 #{extends 'Secure/layout.html' /}
 
+<div class="text" ><span style="margin-left:100px;"> Soluciones inteligentes, para empresas inteligentes </span> </div>
 <div id="login">
+
+	
+<div class="diLogin">
+</div>
 	<h1>&{'secure.title'}</h1>
 		
 	#{form @authenticate()}
@@ -17,19 +22,24 @@
 		#{/if}
 	
 		<p id="username-field">
-			<label for="username">Usuario</label>
-			<input type="text" name="username" id="username" value="${flash.username}" />
+			<label for="username">User</label>
+			<input type="text" class="bonitoField" name="username" id="username" value="${flash.username}" />
 		</p>
 		<p id="password-field">
-			<label for="password">Contrasenia</label>
-			<input type="password" name="password" id="password" value="" />
+			<label for="password">Password</label>
+			<input class="bonitoField" type="password" name="password" id="password" value="" />
 		</p>
 		<p id="remember-field">
 			<input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
 			<label for="remember">Recordarme</label>
 		</p>
 		<p id="signin-field">
-			<input type="submit" id="signin" value="Ingresar" />
+			<input type="submit" class="btn" id="signin" value="Login" />
 		</p>
 	#{/form}
+</div>
+<div class="diApp"style="padding-top:350px;">
+	<span class="cloudT" >Aplicaciones en la nube</span> <br>
+	<span class="cloudT2" >Siempre disponible</span><br>
+	<span class="cloudT3" >Seguridad total</span>
 </div>
