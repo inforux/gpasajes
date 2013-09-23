@@ -4,6 +4,10 @@ html, body {
     font-family: 'Lucida grande', verdana, sans-serif;
 }
 
+a{
+text-decoration:none;
+}
+
 @font-face {
 	    font-family: "oracle";
 	        src: url("/public/fonts/oracle.ttf") format("truetype");
