@@ -40,6 +40,8 @@ text-decoration:none;
     float:left;
 }
 .dContenido{
+    border-style:dotted;
+    border-width:2px;
 	padding:10px;
 	padding-bottom:60px;   /* Height of the footer */
 	clear: both;
