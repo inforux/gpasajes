@@ -134,12 +134,10 @@ padding: 5px;
 }
 
 .container {
-
 margin-top:-50px;
 }
 
 .dNavegacion{
-
     height:70px; 
     background-image: url("/public/images/barraNav.jpg"); 
 width:100%;
