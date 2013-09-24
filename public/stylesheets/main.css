@@ -33,21 +33,28 @@ text-decoration:none;
 	width:100%;
 }
 .tituloE{ 
-    margin-left:70px;
+    margin-left:100px;
     font-family: "oracle", Verdana, Tahoma;
     font-size:20px; 		    
     color:white;
     float:left;
 }
+
 .dContenido{
-    border-style:dotted;
-    border-width:2px;
+	border-style:dotted;
+	border-width:2px;
 	padding:10px;
+
+	margin-left:100px;
+	margin-right:100px;
+	margin-bottom:30px;
+
 	padding-bottom:60px;   /* Height of the footer */
 	clear: both;
 	display: block;
-height:505px;
+	height:480px;
 }
+
 .dFooter{
         width:100%;
 	height:50px;   /* Height of the footer */
@@ -107,7 +114,7 @@ padding: 5px;
 #menu li ul{
 	/*estilo de los submenus*/
 	width:120px;
-	background:#F8F8F8;
+	background:#ffffff;
 	border:1px #ccc solid;
 	display:none; /*importante para que los submenus no estén visibles*/
 	position:absolute;
@@ -124,21 +131,29 @@ padding: 5px;
 }
 #menu li ul li a{
 	/*estilo a cada uno de los enlaces de nuestro submenu*/
-	color:#21759b;
-	font-size:14px;
+	color:black;
+	font-size:15px;
 	line-height:1.3em;
 	display:block;
 	font-weight:normal;
-	padding:8px
+	padding:6px
 	
 }
 #menu li ul li a:hover{
 	/*un poco de decoracion a los enlaces de nuestro submenu al estar el cursor sobre ellos con ayuda de el selector :hover */
-	background-color:#FFF;
-	color:#444;
-	text-decoration:underline;
-	
+	background-color:#e3aa00;
+	color:white;
 }
 #menu li:hover ul{
 	display:block;
+}
+
+.desactivado{
+	opacity: .55;
+	filter:Alpha(Opacity=65);
+	background-image: none;
+	cursor: default !important;
+}
+.desactivado a {
+	cursor: default;
 }

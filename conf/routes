@@ -4,6 +4,28 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /inscripcion				Application.inscripcion
+GET	/nitinerario				Application.nitinerario
+GET	/itinerarios				Application.itinerarios
+GET	/buses					Application.buses
+GET	/choferes				Application.choferes
+GET 	/destinos				Application.destinos
+GET 	/usuarios				Application.usuarios
+GET	/config					Application.configuracion
+GET	/reportes				Application.reportes
+GET	/editar					Application.editar
+
+GET     /inscripcion/				Application.inscripcion
+GET	/nitinerario/				Application.nitinerario
+GET	/itinerarios/				Application.itinerarios
+GET	/buses/					Application.buses
+GET	/choferes/				Application.choferes
+GET 	/destinos/				Application.destinos
+GET 	/usuarios/				Application.usuarios
+GET	/config/				Application.configuracion
+GET	/reportes/				Application.reportes
+GET	/editar/				Application.editar
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

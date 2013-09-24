@@ -61,7 +61,7 @@ public class User extends Model {
 
 	public void setNombres(String n){
 		nombres= n;
-		save();
+		this._set("nombres",nombres);
 	}
 	
 	public String getNCompleto(){
@@ -71,6 +71,11 @@ public class User extends Model {
 	public String toString()
 	{
 		return correo;
+	}
+
+	public void setAdmin(boolean val){
+		isAdmin=val;
+		this._set("isAdmin",isAdmin);
 	}
 	public static User connect(String email,String passwd) {
 		return User.find("bycorreoAndclave", email, passwd).first();

@@ -15,28 +15,49 @@
 		<div class="dNavegacion">
 			<p class="tituloE">Gestion de pasajes</p>
 
-			<ul id="menu">
+			<ul id="menu" >
 				<li><a href="/">Inicio</a>
 				</li>
-				<li><a href="#">Opcion 1</a>
+				<li><a href="" onclick="return false">Itinerario</a>
 				<ul>
-					<li><a href="#">submenu1</a></li>
-					<li><a href="#">submenu1</a></li>
-					<li><a href="#">submenu1</a></li>
+					<li id="inscripcion" ><a href="/inscripcion">Inscripcion </a></li>
+					<li id="nitinerario" class="desactivado"><a href="/nitinerario">Nuevo Itinerario</a></li>
+					<li id="itinerarios" class="desactivado"><a href="/itinerarios">Itinerarios</a></li>
 				</ul>
 				</li>
-				<li><a href="#">Opcion 2</a>
+				<li ><a href="" onclick="return false">Maestro</a>
 				<ul>
-					<li><a href="#">submenu2</a></li>
-					<li><a href="#">submenu2</a></li>
-					<li><a href="#">submenu2</a></li>
+					<li  id="buses" class="desactivado"><a href="/buses">Buses</a></li>
+					<li id="choferes" class="desactivado"><a href="/choferes">Choferes</a></li>
+					<li id="destinos" class="desactivado"><a href="/destinos">Destinos</a></li>
+					<li id="reportes" ><a href="/reportes">Reportes</a></li>
 				</ul>
 				</li>
-				<li><a href="#">${usrLogueado.toString()}</a>
-				<ul>
-					<li><a href="#">Editar</a></li>
-					<li><a href="@{Secure.logout()}">Salir</a></li>
+				<li id="sistema" class="desactivado"><a  href="">Sistema</a>
+				<ul >
+					<li ><a href="/usuarios">Usuarios</a></li>
+					<li ><a href="/config">Configuracion</a></li>
 				</ul>
+				</li>
+
+				<li id="userLogueado"><a onclick="return false" href="">${usrLogueado.toString()}</a>
+				<ul>
+					<li ><a href="/editar">Editar cuenta</a></li>
+					<li><a href="@{Secure.logout()}">Cerrar session</a></li>
+				</ul>
+
+				#{if usrLogueado.isAdmin}
+					<script>
+						$("#nitinerario").removeClass("desactivado");
+						$("#itinerarios").removeClass("desactivado");
+						$("#maestro").removeClass("desactivado");
+						$("#buses").removeClass("desactivado");
+						$("#choferes").removeClass("desactivado");
+						$("#destinos").removeClass("desactivado");
+						$("#reportes").removeClass("desactivado");
+						$("#sistema").removeClass("desactivado");
+					</script>
+				#{/if}
 		</div>
 		<div class="dContenido">
        		 #{doLayout /}
@@ -48,3 +69,10 @@
 
     </body>
 </html>
+<script>
+		$(document).ready(function() { 
+		    $(".desactivado").click(function() { // desabilitamos los menu
+				 return false; 
+			    });
+		});
+</script>

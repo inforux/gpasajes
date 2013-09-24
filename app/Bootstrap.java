@@ -17,6 +17,7 @@ public class Bootstrap extends Job<Object> {
 		System.out.println("Empezando el bootStrap");
 		User usuario1 = new User("admin@empresa.com", "admin","Administrador"," ", true);
 		User usuario2 = new User("msilva@empresa.com", "msilva","Miguel Angel", "Silva Paiva", true);
+		usuario1.setAdmin(true);
 	}
     }
 }
