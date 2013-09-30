@@ -157,3 +157,26 @@ padding: 5px;
 .desactivado a {
 	cursor: default;
 }
+.diApp{
+	height:520px;
+	background-image: url("/public/images/mina_huaron.jpg"); 
+	background-repeat:no-repeat;
+	margin-left:380px;
+	margin-top:50px;
+}
+.cloudT{
+	font-family: "oracle", Verdana, Tahoma;
+	font-size:30px;
+	color:#4d90fe
+}
+
+.cloudT2{
+	font-family: "oracle", Verdana, Tahoma;
+	font-size:20px;
+	color:#4d90fe
+}
+.cloudT3{
+	font-family: "oracle", Verdana, Tahoma;
+	font-size:13px;
+	color:black
+}
