@@ -180,3 +180,11 @@ padding: 5px;
 	font-size:13px;
 	color:black
 }
+.noPermitido{
+	margin-left:150px;
+	margin-top:50px;
+	font-family: "oracle", Verdana, Tahoma;
+	font-size:17px;
+	color:white
+	background-image: url("/public/images/security.jpg"); 
+}

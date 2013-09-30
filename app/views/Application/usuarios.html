@@ -1,3 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Usuarios' /}
+#{if usrLogueado.getIsAdmin()}
 Pagina para la administracion de los usuarios del sistema
+#{/if}
+#{else}
+	#{noPermitido /}
+#{/else}

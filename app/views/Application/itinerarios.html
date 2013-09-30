@@ -1,3 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Itinerarios' /}
+#{if usrLogueado.getIsAdmin()}
 Pagina para gestionar los  itinerarios 
+#{/if}
+#{else}
+	#{noPermitido /}
+#{/else}

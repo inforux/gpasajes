@@ -46,6 +46,10 @@ public class User extends Model {
 	@Required
 	public boolean isAdmin;
 
+	public boolean getIsAdmin(){
+		return isAdmin;
+	}
+
 	public User(String mail, String passwd, String name,String ln, boolean sex)
 	{
 		correo= mail;

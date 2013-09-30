@@ -1,5 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Sistema' /}
+#{if usrLogueado.getIsAdmin()}
 Pagina para gestionar el sistema:<br>
 a) Nombre de la empresa<br>
 b) Datos generales de la empresa.<br>
+#{/if}
+#{else}
+	#{noPermitido /}
+#{/else}

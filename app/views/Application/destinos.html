@@ -1,3 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Destinos' /}
+#{if usrLogueado.getIsAdmin()}
 Pagina para la creacion y mantenimiento de los destinos.
+#{/if}
+#{else}
+	#{noPermitido /}
+#{/else}

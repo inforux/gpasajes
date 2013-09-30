@@ -1,3 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Choferes' /}
+#{if usrLogueado.getIsAdmin()}
 Pagina para la creacion, edicion , y/o eliminacion de los choferes
+#{/if}
+#{else}
+	#{noPermitido /}
+#{/else}
