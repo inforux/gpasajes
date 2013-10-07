@@ -13,7 +13,7 @@
     <body>
 	<div class="container">
 		<div class="dNavegacion">
-			<p class="tituloE">Gestion de pasajes</p>
+			<p class="tituloE">${sistema.toString()}</p>
 
 			<ul id="menu" >
 				<li><a href="/">Inicio</a>
@@ -30,6 +30,7 @@
 					<li  id="buses" class="desactivado"><a href="/buses">Buses</a></li>
 					<li id="choferes" class="desactivado"><a href="/choferes">Choferes</a></li>
 					<li id="destinos" class="desactivado"><a href="/destinos">Destinos</a></li>
+					<li id="unidades" class="desactivado"><a href="/unidades">Unidades</a></li>
 					<li id="reportes" ><a href="/reportes">Reportes</a></li>
 				</ul>
 				</li>
@@ -40,7 +41,7 @@
 				</ul>
 				</li>
 
-				<li id="userLogueado"><a onclick="return false" href="">${usrLogueado.toString()}</a>
+				<li id="userLogueado"><a onclick="return false" href="">${usrLogueado.getNombre1()} ${usrLogueado.getApellido1()}</a>
 				<ul>
 					<li ><a href="/editar">Editar cuenta</a></li>
 					<li><a href="@{Secure.logout()}">Cerrar session</a></li>
@@ -56,6 +57,7 @@
 						$("#destinos").removeClass("desactivado");
 						$("#reportes").removeClass("desactivado");
 						$("#sistema").removeClass("desactivado");
+						$("#unidades").removeClass("desactivado");
 					</script>
 				#{/if}
 		</div>

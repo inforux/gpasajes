@@ -1,9 +1,81 @@
 #{extends 'main.html' /}
 #{set title:'Sistema' /}
+
 #{if usrLogueado.getIsAdmin()}
-Pagina para gestionar el sistema:<br>
-a) Nombre de la empresa<br>
-b) Datos generales de la empresa.<br>
+<table style="float:left;margin-left:50px;margin-top:70px">
+
+	<tr>
+		<td><label for="username">Nombre del sistema</label>	</td>
+		<td><input type="text" class="bonitoField" id="nombreSistema" value="${sistema.nombreSistema}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Descripcion</label>	</td>
+		<td><input type="text" class="bonitoField" id="descripcionSistema" value="${sistema.descripcion}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Fecha</label>	</td>
+		<td><input type="text" class="bonitoField" id="fechaSistema" value="${sistema.fecha.format('dd MMMM yyyy hh:mm:ss')}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Ruc</label>	</td>
+		<td><input type="text" class="bonitoField" id="rucSistema" value="${sistema.ruc}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Presentacion</label>	</td>
+		<td><textarea type="text" rows="10" cols="18"  class="bonitoField" id="presentacionSistema" >${sistema.presentacion}</textarea></td>
+	</tr>
+	<tr>
+		<td><label for="username">Representante</label>	</td>
+		<td><input type="text" class="bonitoField" id="representanteSistema" value="${sistema.representante}" />	</td>
+	</tr>
+</table>
+<table style="float:left;margin-left:100px;margin-top:70px">
+	<tr>
+		<td><label for="username">Telefono 1</label>	</td>
+		<td><input type="text" class="bonitoField" id="telefono1Sistema" value="${sistema.telefono1}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Telefono 2</label>	</td>
+		<td><input type="text" class="bonitoField" id="telefono2Sistema" value="${sistema.telefono2}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Direccion</label>	</td>
+		<td><input type="text" class="bonitoField" id="direccionSistema" value="${sistema.direccion}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Web</label>	</td>
+		<td><input type="text" class="bonitoField" id="webSistema" value="${sistema.web}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Serie </label>	</td>
+		<td><input type="text" class="bonitoField" id="serieSistema" value="${sistema.comprobanteSerie}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Correlativo </label>	</td>
+		<td><input type="text" class="bonitoField" id="correlativoSistema" value="${sistema.comprobanteCorrelativo}" />	</td>
+	</tr>
+	<tr>
+		<td><label for="username">Entregar Comprob.</label>	</td>
+		<td>
+		<select id="entregarCSistema">
+		  <option value="0">Si</option>
+		  <option value="1">No</option>
+		</select>  </td>
+	</tr>
+	<tr>
+		<td><label for="username">Enviar Comprob. Email</label>	</td>
+		<td>
+		<select id="enviarEmailSistema">
+		  <option value="0">Si</option>
+		  <option value="1">No</option>
+		</select>  </td>
+
+	</tr>
+
+</table>
+
+	<input type="button" class="btn2" id="saveSistema" value="Editar " />
+	<input type="button" class="btn2" id="saveSistema" value="Guardar cambios" />
 #{/if}
 #{else}
 	#{noPermitido /}

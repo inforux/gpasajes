@@ -60,7 +60,16 @@ text-decoration:none;
 	height:50px;   /* Height of the footer */
 	background-image: url("/public/images/barraNav.jpg"); 
 }
+
 .btn{
+	line-height: 29px;
+	vertical-align: bottom;
+	border: 1px solid #3079ed;
+	color: #fff;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
+	background-color: #4d90fe;
+}
+.btn2{
 	line-height: 29px;
 	vertical-align: bottom;
 	border: 1px solid #3079ed;
@@ -187,4 +196,10 @@ padding: 5px;
 	font-size:17px;
 	color:white
 	background-image: url("/public/images/security.jpg"); 
+}
+
+label{
+    font-size: 17px;
+    font-family:  Verdana, Tahoma;
+    color: #333;
 }

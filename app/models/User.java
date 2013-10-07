@@ -31,11 +31,32 @@ public class User extends Model {
 	public final Date fecha;
 
 	@Required
-	private String nombres;
+	private String nombre1;
+
+	public String getNombre1(){
+		return nombre1;
+	}
 		
 	@Required
-	private String apellidos;
+	private String nombre2;
 
+	public String getNombre2(){
+		return nombre2;
+	}
+
+	@Required
+	private String apellido1;
+
+	public String getApellido1(){
+		return apellido1;
+	}
+
+	@Required
+	private String apellido2;
+
+	public String getApellido2(){
+		return apellido2;
+	}
 	/******
 	**	true	:	masculino
 	**	false	:	femenino
@@ -50,26 +71,46 @@ public class User extends Model {
 		return isAdmin;
 	}
 
-	public User(String mail, String passwd, String name,String ln, boolean sex)
+	@Required
+	public boolean isChofer;
+
+	public boolean getIsChofer(){
+		return isChofer;
+	}
+
+	public User(String mail, String passwd, boolean sex)
 	{
 		correo= mail;
 		clave=passwd;
-		nombres= name;
-		apellidos=ln;
 		sexo= sex;
 		fecha= new Date();
+		isChofer= false;
 		isAdmin = false;
 		save();
-
 	}
 
-	public void setNombres(String n){
-		nombres= n;
-		this._set("nombres",nombres);
+	public void setNombre1(String n){
+		nombre1= n;
+		this._set("nombre1",nombre1);
+	}
+
+	public void setNombre2(String n){
+		nombre2= n;
+		this._set("nombre2",nombre2);
 	}
 	
+	public void setApellido1(String n){
+		apellido1= n;
+		this._set("apellido1",apellido1);
+	}
+
+	public void setApellido2(String n){
+		apellido2= n;
+		this._set("apellido2",apellido2);
+	}
+
 	public String getNCompleto(){
-		return nombres +" "+ apellidos; 
+		return nombre1 + " "+nombre2+" "+apellido1+" "+apellido2; 
 	}
 
 	public String toString()
@@ -77,12 +118,17 @@ public class User extends Model {
 		return correo;
 	}
 
+	public void setIsChofer(boolean val){
+		isChofer=val;
+		this._set("isChofer", isChofer);
+	}
+
 	public void setAdmin(boolean val){
 		isAdmin=val;
 		this._set("isAdmin",isAdmin);
 	}
+
 	public static User connect(String email,String passwd) {
 		return User.find("bycorreoAndclave", email, passwd).first();
 	}
-	
 }

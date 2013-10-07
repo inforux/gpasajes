@@ -1,0 +1,9 @@
+#{extends 'main.html' /}
+#{set title:'Unidades' /}
+#{if usrLogueado.getIsAdmin()}
+Pagina para gestionar las unidades
+#{/if}
+#{else}
+	#{noPermitido /}
+#{/else}
+
